@@ -49,12 +49,12 @@ Daily (weekdays). Configured as a Claude Code cloud routine with cron trigger.
 
 The following secrets must be configured in the Claude Code cloud routine environment:
 
-| Variable        | Description                                       |
-| --------------- | ------------------------------------------------- |
-| `SMTP_HOST`     | IONOS SMTP host (e.g. `smtp.ionos.eu`)            |
-| `SMTP_PORT`     | SMTP port (`465` for SSL)                         |
-| `SMTP_USER`     | Sender address (`michele.minno@sara-systems.com`) |
-| `SMTP_PASSWORD` | IONOS account password                            |
+| Variable        | Description                                      |
+| --------------- | ------------------------------------------------ |
+| `SMTP_HOST`     | IONOS SMTP host (e.g. `smtp.ionos.eu`)           |
+| `SMTP_PORT`     | SMTP port (`465` for SSL)                        |
+| `SMTP_USER`     | Sender address (`michele.minno@sara-system.com`) |
+| `SMTP_PASSWORD` | IONOS account password                           |
 
 > **Note:** Never commit these values to the repository. Always set them as environment secrets in the Claude Code routine settings.
 
