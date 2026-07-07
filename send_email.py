@@ -5,9 +5,9 @@ Sends the daily EU grants summary email via IONOS SMTP.
 Called by the Claude Code cloud routine at the end of each execution.
 
 Required environment secrets:
-    SMTP_HOST      — e.g. smtp.ionos.eu
+    SMTP_HOST      — e.g. smtp.ionos.co.uk
     SMTP_PORT      — e.g. 465
-    SMTP_USER      — e.g. michele.minno@sara-systems.com
+    SMTP_USER      — e.g. michele.minno@sara-system.com
     SMTP_PASSWORD  — IONOS account password
 """
 
