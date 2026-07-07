@@ -12,13 +12,13 @@ This Claude Code cloud routine runs daily and:
 
 ## Monitored programmes
 
-| Programme | Focus |
-|---|---|
-| Erasmus+ | Cooperation Partnerships, Teacher Academies, Digital Education |
-| Horizon Europe | Digital, Industry & Space cluster; Civil Society pillar |
-| Digital Europe Programme (DIGITAL) | Advanced digital skills |
-| Creative Europe | Educational/media content (when relevant) |
-| Italian co-funding (PON, PNRR) | School digitalisation, where relevant |
+| Programme                          | Focus                                                          |
+| ---------------------------------- | -------------------------------------------------------------- |
+| Erasmus+                           | Cooperation Partnerships, Teacher Academies, Digital Education |
+| Horizon Europe                     | Digital, Industry & Space cluster; Civil Society pillar        |
+| Digital Europe Programme (DIGITAL) | Advanced digital skills                                        |
+| Creative Europe                    | Educational/media content (when relevant)                      |
+| Italian co-funding (PON, PNRR)     | School digitalisation, where relevant                          |
 
 ## Consortium profile
 
@@ -27,10 +27,10 @@ This Claude Code cloud routine runs daily and:
 
 ## Recipients
 
-| Name | Address |
-|---|---|
-| Michele Minno | michele.minno@sara-systems.com |
-| Luca Sbano | luca.sbano@sara-systems.eu |
+| Name               | Address                            |
+| ------------------ | ---------------------------------- |
+| Michele Minno      | michele.minno@sara-system.com      |
+| Luca Sbano         | luca.sbano@sara-systems.eu         |
 | Markus Kirkilionis | markus.kirkilionis@sara-systems.eu |
 
 ## Schedule
@@ -39,22 +39,22 @@ Daily (weekdays). Configured as a Claude Code cloud routine with cron trigger.
 
 ## Files
 
-| File | Description |
-|---|---|
-| `prompt.md` | Main prompt passed to Claude at each execution |
+| File            | Description                                         |
+| --------------- | --------------------------------------------------- |
+| `prompt.md`     | Main prompt passed to Claude at each execution      |
 | `send_email.py` | SMTP email sender script (uses environment secrets) |
-| `README.md` | This file |
+| `README.md`     | This file                                           |
 
 ## Environment secrets required
 
 The following secrets must be configured in the Claude Code cloud routine environment:
 
-| Variable | Description |
-|---|---|
-| `SMTP_HOST` | IONOS SMTP host (e.g. `smtp.ionos.eu`) |
-| `SMTP_PORT` | SMTP port (`465` for SSL) |
-| `SMTP_USER` | Sender address (`michele.minno@sara-systems.com`) |
-| `SMTP_PASSWORD` | IONOS account password |
+| Variable        | Description                                       |
+| --------------- | ------------------------------------------------- |
+| `SMTP_HOST`     | IONOS SMTP host (e.g. `smtp.ionos.eu`)            |
+| `SMTP_PORT`     | SMTP port (`465` for SSL)                         |
+| `SMTP_USER`     | Sender address (`michele.minno@sara-systems.com`) |
+| `SMTP_PASSWORD` | IONOS account password                            |
 
 > **Note:** Never commit these values to the repository. Always set them as environment secrets in the Claude Code routine settings.
 
