@@ -48,7 +48,7 @@ Search the web for updated official pages of:
    - Bullet list of relevant calls found, or a clear "no new calls today" note
    - For each call: name, deadline, budget, consortium fit, official link
 
-5. Send the email using the SMTP script (`send_email.py`) with the environment secrets configured in the routine, to:
+5. Send the email using the sender script (`send_email.py`, Mailgun HTTP API) with the environment secrets configured in the routine, to:
    - michele.minno@sara-system.com
    - luca.sbano@sara-systems.eu
    - markus.kirkilionis@sara-systems.eu

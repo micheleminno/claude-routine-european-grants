@@ -47,21 +47,28 @@ Daily (weekdays). Configured as a Claude Code cloud routine with cron trigger.
 
 ## Environment secrets required
 
-The following secrets must be configured in the Claude Code cloud routine environment:
+Email is sent via the **Mailgun HTTP API** (not SMTP) because the routine's
+sandboxed execution environment only permits outbound HTTPS traffic — raw
+SMTP connections (e.g. to IONOS on port 465) are blocked by the network
+policy and time out.
 
-| Variable        | Description                                      |
-| --------------- | ------------------------------------------------ |
-| `SMTP_HOST`     | IONOS SMTP host (e.g. `smtp.ionos.eu`)           |
-| `SMTP_PORT`     | SMTP port (`465` for SSL)                        |
-| `SMTP_USER`     | Sender address (`michele.minno@sara-system.com`) |
-| `SMTP_PASSWORD` | IONOS account password                           |
+| Variable               | Required | Description                                                                                         |
+| ---------------------- | -------- | --------------------------------------------------------------------------------------------------- |
+| `MAILGUN_API_KEY`      | yes      | Mailgun private API key                                                                             |
+| `MAILGUN_DOMAIN`       | yes      | Mailgun sending domain (e.g. `mg.sara-system.com`, or the sandbox domain on the free plan)          |
+| `MAILGUN_API_BASE_URL` | no       | Defaults to `https://api.mailgun.net/v3`; use `https://api.eu.mailgun.net/v3` for EU-region domains |
+| `MAILGUN_FROM`         | no       | Defaults to `European Grants Monitor <mailgun@MAILGUN_DOMAIN>`                                      |
 
 > **Note:** Never commit these values to the repository. Always set them as environment secrets in the Claude Code routine settings.
+>
+> On Mailgun's free sandbox domain, only "Authorized Recipients" added in the
+> Mailgun dashboard can receive mail — add all three recipients below there,
+> or verify a custom domain to send without restriction.
 
 ## Setup
 
 1. Clone this repo and associate it with a Claude Code cloud routine
-2. Add the four environment secrets listed above in the routine settings
+2. Add the Mailgun environment secrets listed above in the routine settings
 3. Set the cron schedule (daily, weekdays recommended)
 4. Run once manually to verify the email is delivered correctly
 
