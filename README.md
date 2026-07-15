@@ -39,11 +39,11 @@ Daily (weekdays). Configured as a Claude Code cloud routine with cron trigger.
 
 ## Files
 
-| File            | Description                                         |
-| --------------- | --------------------------------------------------- |
-| `prompt.md`     | Main prompt passed to Claude at each execution      |
-| `send_email.py` | SMTP email sender script (uses environment secrets) |
-| `README.md`     | This file                                           |
+| File            | Description                                                     |
+| --------------- | --------------------------------------------------------------- |
+| `prompt.md`     | Main prompt passed to Claude at each execution                  |
+| `send_email.py` | Mailgun HTTP API email sender script (uses environment secrets) |
+| `README.md`     | This file                                                       |
 
 ## Environment secrets required
 
