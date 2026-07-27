@@ -33,6 +33,7 @@ from datetime import date
 
 RECIPIENTS = [
     "michele.minno@sara-system.com",
+    "michele.minno@gmail.com",
     "luca.sbano@sara-systems.eu",
     "markus.kirkilionis@sara-systems.eu",
 ]
