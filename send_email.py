@@ -33,8 +33,9 @@ from datetime import date
 
 RECIPIENTS = [
     "michele.minno@sara-system.com",
-    "michele.minno@gmail.com",
+    "michele.minno@liceovittoriacolonnaroma.edu.it",
     "luca.sbano@sara-system.com",
+    "luca.sbano@liceovittoriacolonnaroma.edu.it",
     "markus.kirkilionis@sara-system.com",
     "aurelia.mbeke@sara-system.com"
 ]
